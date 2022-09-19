@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOOPovaryonok
 {
-    public partial class Form1 : Form
+    public partial class Layout : Form
     {
-        public Form1()
+        public Layout()
         {
             InitializeComponent();
         }
