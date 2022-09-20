@@ -58,11 +58,11 @@
             this.tableLayoutPanelMain.Location = new System.Drawing.Point(0, 48);
             this.tableLayoutPanelMain.Name = "tableLayoutPanelMain";
             this.tableLayoutPanelMain.RowCount = 5;
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.12409F));
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.09065F));
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.09065F));
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.56799F));
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.1266F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.66783F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.39543F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.70399F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.56183F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.67091F));
             this.tableLayoutPanelMain.Size = new System.Drawing.Size(432, 405);
             this.tableLayoutPanelMain.TabIndex = 0;
             // 
@@ -70,9 +70,9 @@
             // 
             this.labelLogin.AutoSize = true;
             this.labelLogin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelLogin.Location = new System.Drawing.Point(3, 101);
+            this.labelLogin.Location = new System.Drawing.Point(3, 124);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(210, 73);
+            this.labelLogin.Size = new System.Drawing.Size(210, 46);
             this.labelLogin.TabIndex = 8;
             this.labelLogin.Text = "Логин";
             this.labelLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -81,10 +81,10 @@
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelPassword.Location = new System.Drawing.Point(0, 174);
+            this.labelPassword.Location = new System.Drawing.Point(0, 170);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(216, 73);
+            this.labelPassword.Size = new System.Drawing.Size(216, 43);
             this.labelPassword.TabIndex = 6;
             this.labelPassword.Text = "Пароль";
             this.labelPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,9 +94,9 @@
             this.buttonWithoutAutorization.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonWithoutAutorization.FlatAppearance.BorderSize = 0;
             this.buttonWithoutAutorization.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonWithoutAutorization.Location = new System.Drawing.Point(3, 250);
+            this.buttonWithoutAutorization.Location = new System.Drawing.Point(3, 216);
             this.buttonWithoutAutorization.Name = "buttonWithoutAutorization";
-            this.buttonWithoutAutorization.Size = new System.Drawing.Size(210, 48);
+            this.buttonWithoutAutorization.Size = new System.Drawing.Size(210, 61);
             this.buttonWithoutAutorization.TabIndex = 2;
             this.buttonWithoutAutorization.Text = "Войти без авторизации";
             this.buttonWithoutAutorization.UseVisualStyleBackColor = true;
@@ -106,9 +106,9 @@
             this.buttonAutorization.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonAutorization.FlatAppearance.BorderSize = 0;
             this.buttonAutorization.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAutorization.Location = new System.Drawing.Point(219, 250);
+            this.buttonAutorization.Location = new System.Drawing.Point(219, 216);
             this.buttonAutorization.Name = "buttonAutorization";
-            this.buttonAutorization.Size = new System.Drawing.Size(210, 48);
+            this.buttonAutorization.Size = new System.Drawing.Size(210, 61);
             this.buttonAutorization.TabIndex = 3;
             this.buttonAutorization.Text = "Войти";
             this.buttonAutorization.UseVisualStyleBackColor = true;
@@ -117,7 +117,7 @@
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(236, 111);
+            this.textBox1.Location = new System.Drawing.Point(236, 134);
             this.textBox1.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(176, 40);
@@ -127,7 +127,7 @@
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox2.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(236, 184);
+            this.textBox2.Location = new System.Drawing.Point(236, 180);
             this.textBox2.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
@@ -189,6 +189,7 @@
             this.MinimumSize = new System.Drawing.Size(450, 500);
             this.Name = "Authorization";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Authorization_FormClosing);
             this.Load += new System.EventHandler(this.Authorization_Load);
             this.tableLayoutPanelMain.ResumeLayout(false);
             this.tableLayoutPanelMain.PerformLayout();
