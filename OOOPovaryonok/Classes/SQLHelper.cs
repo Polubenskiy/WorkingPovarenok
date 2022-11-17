@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Data.SqlClient;
 
 namespace OOOPovaryonok.Classes
 {
     public class SQLHelper
     {
+        //public static string ConnectionString = @"Data Source=ILUVATAR\SQLEXPRESS;Initial Catalog=Trade; Integrated Security = True";
+        //public static string ConnectionString = @"Data Source=ILUVATAR\MSSQLMYSERVER;Initial Catalog=Trade; Persist Security Info = True; User ID = loginDElqb2018; Password = RNynil";
         public static string ConnectionString = @"Data Source=ILUVATAR\MSSQLMYSERVER;Initial Catalog=Trade; Integrated Security = True";
 
         public static SqlConnection connection = new SqlConnection(ConnectionString);
@@ -29,10 +25,14 @@ namespace OOOPovaryonok.Classes
                 connection.Close();
             }
         }
+                                                
+        public static SQLHelper DatabaseContext { get; set; }
 
         public SqlConnection GetConnection()
         {
             return connection;
         }
+
+
     }
 }

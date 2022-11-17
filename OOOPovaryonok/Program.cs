@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using OOOPovaryonok.Classes;
+using System;
 using System.Windows.Forms;
 
 namespace OOOPovaryonok
@@ -14,6 +12,8 @@ namespace OOOPovaryonok
         [STAThread]
         static void Main()
         {
+            SQLDatabaseHelper.DatabaseContext = new Entities.Trade();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Authorization());
