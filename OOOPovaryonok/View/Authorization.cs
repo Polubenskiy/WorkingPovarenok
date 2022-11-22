@@ -1,4 +1,5 @@
 ﻿using OOOPovaryonok.Classes;
+using OOOPovaryonok.Entities;
 using OOOPovaryonok.View;
 using System;
 using System.Data.SqlClient;
@@ -46,12 +47,13 @@ namespace OOOPovaryonok
 
         private void buttonAutorization_Click(object sender, EventArgs e)
         {
-            int? roleID = -1;
-            Roles role = new Roles();
-            if (!textBoxLogin.Text.Equals("") && !textBoxSecret.Text.Equals(""))
-                roleID = role.GetRoleID(textBoxLogin.Text, textBoxSecret.Text); 
+            Roles role = new Roles(textBoxLogin.Text, textBoxSecret.Text);
 
-   
+            if (role.RoleID == -1)
+            {
+                MessageBox.Show("Неправильный логин или пароль");
+                return;
+            }
             ProductList productList = new ProductList(role);
 
             this.Hide();
@@ -61,8 +63,12 @@ namespace OOOPovaryonok
 
         private void buttonWithoutAutorization_Click(object sender, EventArgs e)
         {
-            ProductList productList = new ProductList();
+            Roles role = new Roles();
+            role.Guest();
 
+            MessageBox.Show($"Roleid = {role.RoleID}, rolename ={role.RoleName}");
+
+            ProductList productList = new ProductList();
             this.Hide();
             productList.ShowDialog();
             this.Show();

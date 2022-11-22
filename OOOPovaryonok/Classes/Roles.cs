@@ -5,26 +5,47 @@ namespace OOOPovaryonok.Classes
 {
     public class Roles
     {
-        public int? roleID;
-        public string nameRole;
-
+        private int? _roleID;
+        private string _nameRole;
         
-        public int? GetRoleID(string login, string secret)
+        public int RoleID { get { return (int)_roleID; } }
+        public string RoleName { get { return _nameRole; } }
+
+        public Roles()
+        {
+
+        }
+
+        public Roles(string login, string secret)
+        {
+            GetRole(login, secret);
+        }
+
+        public void GetRole(string login, string secret)
         {
             try
             {
-                roleID = SQLDatabaseHelper.DatabaseContext.User.
-                   Where(x => x.UserLogin == login && x.UserPassword == secret).FirstOrDefault().UserRole;     
+                var temp = SQLDatabaseHelper.DatabaseContext.User.
+                    Where(x => x.UserLogin == login && x.UserPassword == secret).FirstOrDefault().UserRole;
 
-                nameRole = SQLDatabaseHelper.DatabaseContext.Role.
-                    Where(x => x.RoleID == roleID).FirstOrDefault().RoleName;
+                _roleID = temp;
+                
+                _nameRole = SQLDatabaseHelper.DatabaseContext.Role.
+                    Where(x => x.RoleID == _roleID).FirstOrDefault().RoleName;
+
             }
             catch (Exception)
             {
-                roleID = -1;
-
+                _roleID = -1;
+                _nameRole = "Гость";        
             }
-            return roleID;
+        }
+        
+
+        public void Guest()
+        {
+            this._roleID = -1;
+            this._nameRole = "Гость";
         }
     }
 }

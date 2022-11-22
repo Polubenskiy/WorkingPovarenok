@@ -1,9 +1,8 @@
-﻿using OOOPovaryonok.Classes;
-using System;
-using System.Windows.Forms;
-
-namespace OOOPovaryonok
+﻿namespace OOOPovaryonok
 {
+    using System;
+    using System.Windows.Forms;
+
     internal static class Program
     {
         /// <summary>

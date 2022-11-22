@@ -2,11 +2,8 @@
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Reflection;
 using System.Windows.Forms;
 using OOOPovaryonok.Classes;
-using OOOPovaryonok.Entities;
 
 namespace OOOPovaryonok.View
 {
@@ -19,7 +16,7 @@ namespace OOOPovaryonok.View
             InitializeComponent();
             this.role = role;
 
-            MessageBox.Show($"id роли = {role.roleID} имя роли = {role.nameRole}");
+            MessageBox.Show($"id роли = {role.RoleID} имя роли = {role.RoleName}");
         }
 
         Bitmap bitmap;
@@ -31,7 +28,7 @@ namespace OOOPovaryonok.View
                                         //Массив скидок
         string[,] arrayDiscount = new string[,] { { "0", "100" }, { "0", "9.99" }, { "10", "14.99" }, { "15", "100" } };
 
-        Roles role = new Roles();
+        Roles role;
 
 
         private void ProductList_FormClosing(object sender, FormClosingEventArgs e)
