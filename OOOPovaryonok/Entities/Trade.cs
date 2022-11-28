@@ -8,9 +8,8 @@ namespace OOOPovaryonok.Entities
     public partial class Trade : DbContext
     {
         public Trade()
-            : base("name=Trade")
+            : base("name=TradeMainPC")
         {
-
         }
 
         public virtual DbSet<Category> Category { get; set; }
@@ -22,7 +21,6 @@ namespace OOOPovaryonok.Entities
         public virtual DbSet<Provider> Provider { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Status> Status { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Unit> Unit { get; set; }
         public virtual DbSet<User> User { get; set; }
 

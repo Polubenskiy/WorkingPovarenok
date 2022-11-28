@@ -1,14 +1,11 @@
 ﻿using OOOPovaryonok.Classes;
-using OOOPovaryonok.Entities;
 using OOOPovaryonok.View;
 using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace OOOPovaryonok
-{                                                
-    
-
+{               
     public partial class Authorization : Form
     {
         public Authorization() => InitializeComponent();
@@ -68,7 +65,7 @@ namespace OOOPovaryonok
 
             MessageBox.Show($"Roleid = {role.RoleID}, rolename ={role.RoleName}");
 
-            ProductList productList = new ProductList();
+            ProductList productList = new ProductList(role);
             this.Hide();
             productList.ShowDialog();
             this.Show();

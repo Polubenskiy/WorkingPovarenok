@@ -21,6 +21,12 @@ namespace OOOPovaryonok.Classes
             GetRole(login, secret);
         }
 
+        public void Deconstruct(out int userID, out string userRole)
+        {
+            userID = (int)_roleID;
+            userRole = _nameRole;
+        }
+
         public void GetRole(string login, string secret)
         {
             try

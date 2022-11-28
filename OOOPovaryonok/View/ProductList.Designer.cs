@@ -106,7 +106,6 @@ namespace OOOPovaryonok.View
             this.tableLayoutPanelNavigation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelNavigation.Size = new System.Drawing.Size(1519, 74);
             this.tableLayoutPanelNavigation.TabIndex = 2;
-            this.tableLayoutPanelNavigation.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanelNavigation_Paint);
             // 
             // coloredComboSort
             // 
@@ -257,7 +256,6 @@ namespace OOOPovaryonok.View
             this.dataGridViewProductList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridViewProductList.Size = new System.Drawing.Size(1519, 705);
             this.dataGridViewProductList.TabIndex = 1;
-            this.dataGridViewProductList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProductList_CellContentClick);
             this.dataGridViewProductList.SelectionChanged += new System.EventHandler(this.dataGridViewProductList_SelectionChanged);
             // 
             // Image

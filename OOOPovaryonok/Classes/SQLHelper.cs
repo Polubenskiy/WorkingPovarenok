@@ -4,9 +4,9 @@ namespace OOOPovaryonok.Classes
 {
     public class SQLHelper
     {
-        //public static string ConnectionString = @"Data Source=ILUVATAR\SQLEXPRESS;Initial Catalog=Trade; Integrated Security = True";
+        public static string ConnectionString = @"Data Source=ILUVATAR\SQLEXPRESS;Initial Catalog=Trade; Integrated Security = True";
         //public static string ConnectionString = @"Data Source=ILUVATAR\MSSQLMYSERVER;Initial Catalog=Trade; Persist Security Info = True; User ID = loginDElqb2018; Password = RNynil";
-        public static string ConnectionString = @"Data Source=ILUVATAR\MSSQLMYSERVER;Initial Catalog=Trade; Integrated Security = True";
+        //public static string ConnectionString = @"Data Source=ILUVATAR\MSSQLMYSERVER;Initial Catalog=Trade; Integrated Security = True";
 
         public static SqlConnection connection = new SqlConnection(ConnectionString);
 
@@ -32,7 +32,5 @@ namespace OOOPovaryonok.Classes
         {
             return connection;
         }
-
-
     }
 }
